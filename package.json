@@ -1,0 +1,23 @@
+{
+  "name": "url_shortener_microservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rug3y/url_shortener_microservice.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rug3y/url_shortener_microservice/issues"
+  },
+  "homepage": "https://github.com/rug3y/url_shortener_microservice#readme",
+  "dependencies": {
+    "express": "^4.13.4"
+  }
+}
