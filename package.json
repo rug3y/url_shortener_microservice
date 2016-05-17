@@ -18,6 +18,9 @@
   },
   "homepage": "https://github.com/rug3y/url_shortener_microservice#readme",
   "dependencies": {
-    "express": "^4.13.4"
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "mongodb": "^2.1.18",
+    "mongoose": "^4.4.17"
   }
 }
