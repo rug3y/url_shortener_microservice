@@ -4,8 +4,11 @@ var app        = express();
 
 var port = process.env.PORT || 8080;
 
+var url = require('./app/models/url.js');
+
 // data
 // url { original: "original_url", short: "short_url" }
+
 // mongoose.connect('mongodb://localhost:27017/urls'); // mongoose needs the collection name
 mongoose.connect('mongodb://url_app:Toxic12@ds023932.mlab.com:23932/url_shortener', function(err){
 	if(err) {
@@ -23,15 +26,19 @@ mongoose.connect('mongodb://url_app:Toxic12@ds023932.mlab.com:23932/url_shortene
 
 //3. User Story: When I visit that shortened URL, it will redirect me to my original link.
 
-// This route should show the user a webpage that tells them how to use the app
-app.get('/', function(req, res) {
-	res.send("Hey there!");
+var router = express.Router();
+
+router.get('/', function(req, res) {
+	res.json({ message: "Url shortening service"});
 });
+
 
 // redirect example
 // app.get('/red', function(req, res) {
 // 	res.redirect('http://google.com');
 // })
+
+app.use(router);
 
 app.listen(port, function() {
 	console.log("listening at port " + port);
