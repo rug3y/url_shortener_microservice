@@ -60,6 +60,18 @@ router.route('/urls').get(function(req,res) {
 	});
 });
 
+router.route('/urls/:url').get(function(req, res) {
+	var getUrl = req.params.url;
+	Url.findOne({ short: getUrl }, function(err, url) {
+		if(err) return(err);
+		var original = url.original;
+		res.redirect('http://' + original);
+	});
+
+
+});
+
+
 // redirect example
 // app.get('/red', function(req, res) {
 // 	res.redirect('http://google.com');
