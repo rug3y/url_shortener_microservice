@@ -25,10 +25,10 @@ mongoose.connect('mongodb://url_app:Toxic12@ds023932.mlab.com:23932/url_shortene
 //2. User Story: If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.
 //3. User Story: When I visit that shortened URL, it will redirect me to my original link.
 
-var randomNumber = function() {
+function randomNumber() {
 	var number = Math.floor(1000000 + Math.random() * 9999999).toString().substring(0, 4);
 	return number;
-}
+};
 
 var router = express.Router();
 
@@ -70,7 +70,6 @@ router.route('/urls/:url').get(function(req, res) {
 
 
 });
-
 
 // redirect example
 // app.get('/red', function(req, res) {
