@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+		<div id="content">
+		<h1>URL Shortening Microservice - FreeCodeCamp Project</h1>
+
+		<h3>User Stories:</h3>
+		<ul>
+
+			<li>User Story: I can pass a URL as a parameter and I will receive a shortened URL in the JSON response.</li>
+
+			<li>User Story: If I pass an invalid URL that doesn't follow the valid http://www.example.com format, the JSON response will contain an error instead.</li>
+
+			<li>User Story: When I visit that shortened URL, it will redirect me to my original link.</li>
+
+		</ul>
+
+		<h3>Example Usage:</h3>
+		<div>
+			<h4>To see a directory of saved urls:</h4>
+			<p>https://url-shorten-r.herokuapp.com/urls</p>
+		</div>
+
+		<div>
+			<h4>To create a new short url:</h4>
+			<p><em>Input:</em> https://url-shorten-r.herokuapp.com/new/http://example-url.com</p>
+			<p><em>Output:</em> {"__v":0,"original":"http://example-url.com","short":"2232","_id":"573fd1a7c7ea7b691c59b171"}
+		</div>
+
+		<div>
+			<h4>To use the shortened url, pass the "short" url that was given:</h4>
+			<p>https://url-shorten-r.herokuapp.com/urls/2232</p>
+		</div>
+</body>

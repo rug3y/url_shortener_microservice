@@ -5,6 +5,9 @@ var app           = express();
 
 var port = process.env.PORT || 8080;
 
+// app.use(express.static('public'));
+app.use('/css', express.static('public'));
+
 var urlSchema = new mongoose.Schema({
 	original: String,
 	short: String
@@ -28,7 +31,7 @@ function randomNumber() {
 var router = express.Router();
 
 router.get('/', function(req, res) {
-	res.json({ message: "Url shortening service"});
+	res.sendFile(__dirname + '/views/index.html');
 });
 
 router.route('/new/:long_url(*)').get(function(req, res) {
