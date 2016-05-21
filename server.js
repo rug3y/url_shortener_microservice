@@ -5,7 +5,6 @@ var app           = express();
 
 var port = process.env.PORT || 8080;
 
-// app.use(express.static('public'));
 app.use('/css', express.static('public'));
 
 var urlSchema = new mongoose.Schema({
