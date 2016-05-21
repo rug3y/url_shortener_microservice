@@ -15,7 +15,7 @@ var urlSchema = new mongoose.Schema({
 
 var Url = mongoose.model('Url', urlSchema);
 
-mongoose.connect('mongodb://url_app:Toxic12@ds023932.mlab.com:23932/url_shortener', function(err){
+mongoose.connect('mongodb://url', function(err){
 	if(err) {
 		console.log("Could not connect");
 	} else {
