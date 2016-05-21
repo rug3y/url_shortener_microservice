@@ -14,7 +14,7 @@ var urlSchema = new mongoose.Schema({
 
 var Url = mongoose.model('Url', urlSchema);
 
-mongoose.connect(MONGO_URI, function(err){
+mongoose.connect(process.env.MONGO_URI, function(err){
 	if(err) {
 		console.log("Could not connect");
 	} else {
